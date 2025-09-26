@@ -1,0 +1,12 @@
+numpy>=1.19.3,<2.0.0
+ollama==0.4.7
+sounddevice==0.5.1
+vosk==0.3.45
+pypiwin32==223
+win10toast==0.9
+keyboard==0.13.5
+pyttsx3==2.98
+PyAutoGUI==0.9.54
+easyocr==1.7.2
+streamlit==1.31.0
+python-dotenv==1.0.0
