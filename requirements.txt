@@ -1,12 +1,41 @@
-numpy>=1.19.3,<2.0.0
-ollama==0.4.7
-sounddevice==0.5.1
-vosk==0.3.45
-pypiwin32==223
-win10toast==0.9
-keyboard==0.13.5
-pyttsx3==2.98
-PyAutoGUI==0.9.54
-easyocr==1.7.2
-streamlit==1.31.0
-python-dotenv==1.0.0
+# Core dependencies
+streamlit>=1.31.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# NLP and sentiment analysis
+vaderSentiment>=3.3.2
+transformers>=4.30.0
+torch>=2.0.0
+textblob>=0.17.1
+nltk>=3.8.1
+spacy>=3.6.0
+
+# File processing
+python-docx>=0.8.11
+PyPDF2>=3.0.1
+python-magic>=0.4.27
+
+# Data visualization
+plotly>=5.15.0
+altair>=5.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+click>=8.1.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.4.0
+
+# Optional: Audio processing (if needed)
+# vosk>=0.3.45
+# sounddevice>=0.5.1
+
+# Optional: Windows-specific (if needed)
+# pypiwin32>=223
+# win10toast>=0.9

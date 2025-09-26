@@ -1,0 +1,5 @@
+{
+  "name": "MeetMogger AI",
+  "description": "An application to analyze transcribed call conversations using AI. It provides call theme classification, sentiment analysis, extracts problems, solutions, and action items, and generates a concise summary.",
+  "requestFramePermissions": []
+}
