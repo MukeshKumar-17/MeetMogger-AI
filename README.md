@@ -2,6 +2,16 @@
 
 A powerful AI-powered call transcript analysis tool that provides deep insights from customer conversations. Analyze themes, sentiment, and extract actionable items to drive your business forward.
 
+## 🌐 Live Demo
+
+**Try it now!** [View Live Demo](https://pandiharshan.github.io/MeetMogger-AI/)
+
+**Demo Credentials:**
+- Email: `demo@meetmogger.ai`
+- Password: `demo123`
+
+*Note: The live demo uses mock data and doesn't require a backend server or API keys.*
+
 ## ✨ Features
 
 - **🔐 User Authentication**: Secure MongoDB-based user registration and login
@@ -27,6 +37,17 @@ Before running this project, make sure you have:
 - **Node.js** (v18 or higher)
 - **MongoDB** (local installation or MongoDB Atlas)
 - **Google Gemini API Key**
+
+## 🎮 Demo Mode
+
+The application includes a **Demo Mode** that works without any backend setup:
+
+- **No MongoDB required** - Uses mock authentication
+- **No API keys needed** - Uses simulated AI responses
+- **Instant setup** - Just clone and run
+- **Full functionality** - Experience all features
+
+To enable demo mode, the application automatically detects when running on GitHub Pages and switches to demo mode.
 
 ## 🚀 Quick Start
 

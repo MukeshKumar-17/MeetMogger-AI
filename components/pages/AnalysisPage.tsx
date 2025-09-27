@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import type { AnalysisResult } from '../../types';
 import { analyzeCallTranscript } from '../../services/geminiService';
+import { analyzeCallTranscript as demoAnalyzeCallTranscript } from '../../services/demoGeminiService';
+import { DEMO_MODE } from '../../demo-config.js';
 import TranscriptInput from '../TranscriptInput';
 import AnalysisDisplay from '../AnalysisDisplay';
 import Loader from '../Loader';
@@ -34,7 +36,9 @@ Vendor: Likewise, thanks for the clear feedback. I’ll send detailed action ite
     setAnalysisResult(null);
 
     try {
-      const result = await analyzeCallTranscript(transcript);
+      const result = DEMO_MODE 
+        ? await demoAnalyzeCallTranscript(transcript)
+        : await analyzeCallTranscript(transcript);
       setAnalysisResult(result);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An unknown error occurred.");

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { DEMO_MODE, DEMO_USERS } from '../demo-config.js';
 
 interface User {
   id: string;
@@ -48,6 +49,26 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = async (email: string, password: string): Promise<{ success: boolean; message: string }> => {
     try {
+      // Demo mode - use mock authentication
+      if (DEMO_MODE) {
+        const demoUser = DEMO_USERS.find(user => user.email === email && user.password === password);
+        if (demoUser) {
+          const userData = {
+            id: demoUser.id,
+            email: demoUser.email,
+            name: demoUser.name
+          };
+          setUser(userData);
+          setToken('demo-token');
+          localStorage.setItem('authToken', 'demo-token');
+          localStorage.setItem('user', JSON.stringify(userData));
+          return { success: true, message: 'Demo login successful!' };
+        } else {
+          return { success: false, message: 'Invalid demo credentials. Use demo@meetmogger.ai / demo123' };
+        }
+      }
+
+      // Production mode - use real API
       const response = await fetch('http://localhost:3001/api/auth/login', {
         method: 'POST',
         headers: {
@@ -75,6 +96,21 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const register = async (name: string, email: string, password: string): Promise<{ success: boolean; message: string }> => {
     try {
+      // Demo mode - simulate registration
+      if (DEMO_MODE) {
+        const userData = {
+          id: `demo-user-${Date.now()}`,
+          email: email,
+          name: name
+        };
+        setUser(userData);
+        setToken('demo-token');
+        localStorage.setItem('authToken', 'demo-token');
+        localStorage.setItem('user', JSON.stringify(userData));
+        return { success: true, message: 'Demo registration successful!' };
+      }
+
+      // Production mode - use real API
       const response = await fetch('http://localhost:3001/api/auth/register', {
         method: 'POST',
         headers: {
