@@ -216,7 +216,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Authors
 
 - **Pandi Harshan K** - [@Pandiharshan](https://github.com/Pandiharshan)
-- **Mukesh Kumar** - [@MukeshKumar-17](https://github.com/MukeshKumar-17)
+- **Mukesh Kumar K** - [@MukeshKumar-17](https://github.com/MukeshKumar-17)
+- **Sabarishwaran R** - [@sabarishwaran7](https://github.com/sabarishwaran7)
 
 ## 🙏 Acknowledgments
 
