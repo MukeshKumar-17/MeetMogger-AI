@@ -1,0 +1,20 @@
+/*
+  Instructions for using your custom font:
+
+  1. Find your font file (e.g., my-font.ttf or my-font.otf).
+  2. Go to an online font to Base64 WOFF2 converter (e.g., base64.guru or transfonter.org).
+     Using the WOFF2 format is highly recommended for web performance.
+  3. Upload your font file and let the tool convert it.
+  4. It will produce a very long string of text. Copy this entire string.
+  5. In the `src` url below, replace the placeholder text 'PASTE_YOUR_BASE64_FONT_DATA_HERE'
+     with the string you just copied.
+  6. In this file and in index.html, replace 'YourCustomFont' with the actual name of your font.
+*/
+
+@font-face {
+  font-family: 'origamet hamida';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('data:font/woff2;charset=utf-8;base64,PASTE_YOUR_BASE64_FONT_DATA_HERE') format('woff2');
+}
