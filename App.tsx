@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Auth from './components/Auth';
 import Navbar from './components/Navbar';
 import MatrixRain from './components/MatrixRain';
@@ -9,26 +10,33 @@ import ContactPage from './components/pages/ContactPage';
 
 export type Page = 'home' | 'analyze' | 'profile' | 'contact';
 
-const App: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+const AppContent: React.FC = () => {
+  const { user, logout, isLoading } = useAuth();
   const [currentPage, setCurrentPage] = useState<Page>('home');
 
   const handleSignOut = () => {
-    setIsLoggedIn(false);
+    logout();
     setCurrentPage('home');
   };
   
   const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
     // After login, direct to the main feature, the analysis page.
     setCurrentPage('analyze');
   };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+      </div>
+    );
+  }
   
   const renderContent = () => {
     const protectedPages: Page[] = ['analyze', 'profile'];
     
     // If user is not logged in and tries to access a protected page, show the login form.
-    if (!isLoggedIn && protectedPages.includes(currentPage)) {
+    if (!user && protectedPages.includes(currentPage)) {
       return <Auth onLoginSuccess={handleLoginSuccess} />;
     }
 
@@ -50,7 +58,7 @@ const App: React.FC = () => {
     <div className="min-h-screen flex flex-col items-center">
       <MatrixRain />
       <Navbar
-        isLoggedIn={isLoggedIn}
+        isLoggedIn={!!user}
         onSignOut={handleSignOut}
         currentPage={currentPage}
         onNavigate={setCurrentPage}
@@ -60,6 +68,14 @@ const App: React.FC = () => {
         {renderContent()}
       </div>
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 };
 
