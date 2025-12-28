@@ -8,7 +8,7 @@ A powerful AI-powered call transcript analysis tool that provides deep insights 
 
 **Demo Credentials:**
 - Email: `demo@meetmogger.ai`
-- Password: `demo123`
+- Password: `demo123` 
 
 *Note: The live demo uses mock data and doesn't require a backend server or API keys.*
 
