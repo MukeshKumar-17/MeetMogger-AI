@@ -1,8 +1,8 @@
-# MeetMogger AI 🚀
+# MeetMogger AI
 
 A powerful AI-powered call transcript analysis tool that provides deep insights from customer conversations. Analyze themes, sentiment, and extract actionable items to drive your business forward.
 
-## 🌐 Live Demo
+## Live Demo
 
 **Try it now!** [View Live Demo](https://pandiharshan.github.io/MeetMogger-AI/)
 
@@ -12,16 +12,16 @@ A powerful AI-powered call transcript analysis tool that provides deep insights 
 
 *Note: The live demo uses mock data and doesn't require a backend server or API keys.*
 
-## ✨ Features
+## Features
 
-- **🔐 User Authentication**: Secure MongoDB-based user registration and login
-- **🎯 Theme Classification**: Automatically categorize calls by their primary topic
-- **😊 Sentiment Analysis**: Understand customer mood and tone
-- **📋 Actionable Extraction**: Extract problems, solutions, and action items
-- **🎨 Modern UI**: Beautiful, responsive interface with dark theme
-- **⚡ Real-time Analysis**: Instant AI-powered insights
+- **User Authentication**: Secure MongoDB-based user registration and login
+- **Theme Classification**: Automatically categorize calls by their primary topic
+- **Sentiment Analysis**: Understand customer mood and tone
+- **Actionable Extraction**: Extract problems, solutions, and action items
+- **Modern UI**: Beautiful, responsive interface with dark theme
+- **Real-time Analysis**: Instant AI-powered insights
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React 19, TypeScript, Vite, Tailwind CSS
 - **Backend**: Node.js, Express.js
@@ -30,7 +30,7 @@ A powerful AI-powered call transcript analysis tool that provides deep insights 
 - **AI**: Google Gemini API
 - **Styling**: Tailwind CSS with custom animations
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running this project, make sure you have:
 
@@ -38,7 +38,7 @@ Before running this project, make sure you have:
 - **MongoDB** (local installation or MongoDB Atlas)
 - **Google Gemini API Key**
 
-## 🎮 Demo Mode
+## Demo Mode
 
 The application includes a **Demo Mode** that works without any backend setup:
 
@@ -49,7 +49,7 @@ The application includes a **Demo Mode** that works without any backend setup:
 
 To enable demo mode, the application automatically detects when running on GitHub Pages and switches to demo mode.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 
@@ -136,7 +136,7 @@ npm run dev
   - Action items
   - Summary
 
-## 🔧 Available Scripts
+## Available Scripts
 
 ```bash
 # Development
@@ -149,7 +149,7 @@ npm run preview      # Preview production build
 npm run test-mongodb # Test MongoDB connection
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### User Model
 ```javascript
@@ -162,14 +162,14 @@ npm run test-mongodb # Test MongoDB connection
 }
 ```
 
-## 🔐 Authentication
+## Authentication
 
 The application uses JWT tokens for authentication:
 - Tokens expire after 7 days
 - Passwords are hashed using bcryptjs
 - User sessions are stored in localStorage
 
-## 🌐 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - User registration
@@ -178,7 +178,7 @@ The application uses JWT tokens for authentication:
 ### Health Check
 - `GET /api/health` - Server health status
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -201,7 +201,7 @@ The application uses JWT tokens for authentication:
 - Make sure `.env` file is in the root directory
 - Restart both server and frontend after changing `.env`
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
@@ -209,17 +209,17 @@ The application uses JWT tokens for authentication:
 4. Push to branch: `git push origin feature-name`
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
+## Authors
 
 - **Pandi Harshan K** - [@Pandiharshan](https://github.com/Pandiharshan)
 - **Mukesh Kumar K** - [@MukeshKumar-17](https://github.com/MukeshKumar-17)
 - **Sabarishwaran R** - [@sabarishwaran7](https://github.com/sabarishwaran7)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Google Gemini AI for powerful language analysis
 - MongoDB for reliable data storage
@@ -228,4 +228,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**⭐ Star this repository if you found it helpful!**
+**Star this repository if you found it helpful!**
